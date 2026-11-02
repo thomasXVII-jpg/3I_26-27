@@ -21,7 +21,7 @@ int main () {
 
     avg = (v1 + v2 + v3) / 3;
 
-    printf("La tua media e': %f\n", avg);
+    printf("La tua media e': %.2f, ", avg);
 
     if (avg >= 6) {
         printf("Sei promosso\n");
