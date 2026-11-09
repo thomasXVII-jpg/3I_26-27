@@ -27,6 +27,7 @@ int main () {
     float tariffa = 0;
     float  Q_1 = 15.50;
     float  Q_2 = 25.00;
+    int corretto;
     char junk;
 
     printf("Scegli la tipologia: ");
@@ -37,6 +38,7 @@ int main () {
     scanf("%f", &consumo);
     junk = getchar();
 
+    corretto = 0;
     if(scelta == 1 && consumo > 0) {
        if(consumo <= 150) {
         tariffa = tariffa + 0.20;
@@ -49,8 +51,7 @@ int main () {
        }
        Q_1 = Q_1 + tariffa;
        printf("Bolletta per i residenti: %f\n", Q_1);
-    } else {
-        printf("IMMISSIONE ERRATA\n");
+       corretto = 1;
     }
 
     if(scelta == 2 && consumo > 0) {
@@ -65,8 +66,11 @@ int main () {
         }
         Q_2 = Q_2 + tariffa;
         printf("Bolletta per i non residenti: %f\n", Q_2);
-    } else {
-        printf("IMMISSIONE ERRATA\n");
+        corretto = 1;
+    }
+
+    if(!corretto) {      // !corretto è uguale a corretto == 0 oppure corretto == false
+        printf("Errore nei dati di input!\n");
     }
 
     return 0;
