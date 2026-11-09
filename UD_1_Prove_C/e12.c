@@ -21,6 +21,7 @@ int main () {
     float prezzo_tot_netto = 0;
     char junk;
 
+    // chideo di inserire il prezzo e la quantità
     printf("Inserisci il prezzo: ");
     scanf("%f", &prezzo_unitario);
     junk = getchar();
@@ -29,8 +30,10 @@ int main () {
     scanf("%d", &quantita);
     junk = getchar();
 
+    // calcolo del prezzo lordo
     prezzo_tot_lordo = prezzo_unitario * quantita;
 
+    // calcolo dello sconto e comunicazione dei prezzi totali
     if(quantita > 10) {
         sconto = (prezzo_tot_lordo / 100) * 15;
         prezzo_tot_netto = prezzo_tot_lordo - sconto;

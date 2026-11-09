@@ -19,6 +19,7 @@ int main () {
     int presenze = 0;
     char junk;
 
+    // chiedo di inserire il voto e le presenze
     printf("Inserisci il voto (da 0 a 30): ");
     scanf("%f", &voto);
     junk = getchar();
@@ -26,6 +27,7 @@ int main () {
     scanf("%d", &presenze);
     junk = getchar();
 
+    // serie di condizioni
     if(voto < 18) {
         printf("Lo studente è bocciato.\n");
     } else {
@@ -36,6 +38,6 @@ int main () {
             printf("Esame superato con successo.");
         }
     }
-
+    
     return 0;
 }
