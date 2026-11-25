@@ -10,11 +10,13 @@ int main() {
     int cnt;
     char junk;
 
+    // input valore iniziale
     printf("Inserisci un numero: ");
     scanf("%d", &v1);
     junk = getchar();
 
-    if(v1 < 100) {
+    // stampa di tutti i valori PARI compresi tra v1 e 100.
+    if(v1 < 100) {  // determino se posso creare la serie numerica.
         cnt = v1;
         while(cnt <= 100) {
             if(cnt %2 == 0) {
@@ -22,7 +24,7 @@ int main() {
             }
             cnt++;
         }
-    } else {
+    } else {    // se il numero è uguale o maggiore di 100, allora non posso realizzare la serie.
         printf("Serie non disponibile.\n");
     }
     return 0;

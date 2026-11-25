@@ -11,6 +11,7 @@ int main () {
     int cnt = 0;
     char junk;
 
+    // fase di input dei due valori
     printf("Inserisci il primo valore: ");
     scanf("%d", &v1);
     junk = getchar();
@@ -19,13 +20,16 @@ int main () {
     scanf("%d", &v2);
     junk = getchar();
 
+    // determino se v2 è maggiore di v1
     if(v2 > v1) {
+        // condizione vera allora posso fare la serie richiesta
         cnt = v1;
         while(cnt <= v2) {
             printf("%d", cnt);
             cnt++;
         }
     } else {
+        // cado nell'else quando v1 è uguale oppure minore di v2
         printf("Serie non disponibile.\n");
     }
     return 0;    

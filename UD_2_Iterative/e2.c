@@ -9,13 +9,15 @@ int main () {
     int cnt = 0;
     char junk;
 
+    // fase di input iniziale
     printf("Inserisci un numero: ");
     scanf("%d", &v1);
     junk = getchar();
 
+    // fase di stampa dei valori da 1 al valore inserito
     while(v1 > cnt) {
-        cnt++;
         printf("%d\n", cnt);
+        cnt++;
     }
     return 0;
 }
